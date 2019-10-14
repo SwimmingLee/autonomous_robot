@@ -1,0 +1,32 @@
+
+# 이 파라미터는 장애물 크기의 최대범위를 설정한다.
+# 이 경우, 로봇은 정면에 존재하는 2.5m미터 이내의 장애물만 볼 것이다.
+obstacle_range: 6.0
+
+# 이 파라미터는 센서가 읽어온 값을 기준으로 로봇이 정면에 존재하는 
+# 3.0미터까지의 공간을 명확히 하는 데 도움을 준다.
+raytrace_range: 3.0
+
+
+# 로봇이 원형이라면, 로봇의 반경을 정의 할 수 있다.
+# 그렇지 않다면, 로봇의 풋프린트값을 언급할 필요가 있다.
+# AR로봇은 원형이므로 로봇 반경을 지정한다.
+footprint: [[-0.23, -0.15],[-0.23, 0.15],[0.06, 0.15],[0.06, -0.15]]
+# robot_radius: 0.15 
+
+
+# 이 파라미터는 실제 장애물에서 이 거리까지 장애물을 부풀린다
+# 이 는 장애물이 tolerance 값으로 작용할 수 있다.
+# 지도의 코스트는 실제 장애물에서 부풀려진 값까지 동일할 것이다. 0.23
+inflation_radius: 0.25
+
+# 이 요인은 과장(inflation) 동안의 코스트를 연산하는데 이용한다. 18.0
+cost_scaling_factor: 30.0
+
+# TF간 상대 좌표 변환 시간의 허용 오차
+tansfrom_tolerance: 0.1
+
+# 사용할 costmap을 voxel(voxel-grid)와 costmap(costmap_2d) 중에서 선택한다.
+map_type: costmap
+observation_sources: scan
+scan: {sensor_frame: base_scan, data_type: LaserScan, topic: scan, marking: true, clearing: true}

@@ -1,0 +1,40 @@
+<launch>
+  
+  <node pkg="ar_bringup" type="twist_to_motors" name="twist_to_motors" output="screen" >
+     <!--<remap from="/virtual_joystick/cmd_vel" to="cmd_vel"/>-->
+  </node>
+<!--
+  <node pkg="ar_bringup" type="diff_tf" name="diff_tf" output="screen" >
+  </node>
+-->
+<!--
+  <node pkg="ar_bringup" type="pid_velocity" name="lpid_velocity" output="screen" >
+
+    <remap from="wheel" to="lwheel"/>
+    <remap from="motor_cmd" to="left_wheel_speed"/>
+    <remap from="wheel_vtarget" to="lwheel_vtarget"/>
+    <remap from="wheel_vel" to="lwheel_vel"/>
+    
+    <rosparam param="Kp">400</rosparam>
+    <rosparam param="Ki">100</rosparam>
+    <rosparam param="Kd">0</rosparam>
+    <rosparam param="rate">30</rosparam>
+    <rosparam param="timeout_ticks">4</rosparam>
+  </node>
+
+
+  <node pkg="ar_bringup" type="pid_velocity" name="rpid_velocity" output="screen" >
+    <remap from="wheel" to="rwheel"/>
+    <remap from="motor_cmd" to="right_wheel_speed"/>
+    <remap from="wheel_vtarget" to="rwheel_vtarget"/>
+    <remap from="wheel_vel" to="rwheel_vel"/>
+
+    <rosparam param="Kp">400</rosparam>
+    <rosparam param="Ki">100</rosparam>
+    <rosparam param="Kd">0</rosparam>
+    <rosparam param="timeout_ticks">4</rosparam>
+    <rosparam param="rate">30</rosparam>
+  </node>
+-->
+
+</launch>

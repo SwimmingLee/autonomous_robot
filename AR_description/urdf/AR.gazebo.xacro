@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<robot name="AR_sim" xmlns:xacro="http://ros.org/wiki/xacro">
+    
+    <!-- 시뮬레이션이 필요하다면 그 때 작성할 것 -->
+
+</robot>

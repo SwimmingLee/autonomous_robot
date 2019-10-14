@@ -1,0 +1,6 @@
+<launch>
+
+  <include file="$(find AR_bringup)/launch/AR_core.launch"/>
+  <include file="$(find AR_bringup)/launch/AR_lidar.launch"/>
+
+</launch>

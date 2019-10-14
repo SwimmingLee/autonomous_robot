@@ -1,0 +1,9 @@
+<launch>
+  
+  <node pkg="ar_bringup" type="twist_to_motors" name="twist_to_motors" output="screen" >
+     <!--<remap from="/virtual_joystick/cmd_vel" to="cmd_vel"/>-->
+  </node>
+
+  <node pkg="scanfusion" type="scanfusion" name="scanfusion" output="screen"/>
+
+</launch>
